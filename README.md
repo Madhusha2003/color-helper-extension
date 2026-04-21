@@ -1,71 +1,114 @@
-# python-color-helper README
+# Universal Color Picker for VS Code
 
-This is the README for your extension "python-color-helper". After writing up a brief description, we recommend including the following sections.
-
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+A lightweight Visual Studio Code extension that detects and previews colors across **all file types**, with an integrated color picker for quick editing.
 
 ---
 
-## Following extension guidelines
+## Features
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+*  Works in **any file** (Python, JavaScript, JSON, Markdown, etc.)
+*  Detects and previews:
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+  * HEX colors (`#ff0000`)
+  * RGB (`(255, 0, 0)`)
+  * RGBA (`rgba(255, 0, 0, 0.5)`)
+* Click on color → open built-in color picker
+* Fast and lightweight (no language dependency)
+* Real-time color detection as you type
 
-## Working with Markdown
+---
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+## Example
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+```python
+primary = (255, 0, 0)
+secondary = #00ff00
+transparent = rgba(255, 0, 0, 0.5)
+```
 
-## For more information
+✔ Automatically shows color previews next to values
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+---
 
-**Enjoy!**
+## Installation
+
+### From VS Code Marketplace
+
+1. Open Extensions in VS Code
+2. Search for **Universal Color Picker**
+3. Click Install
+
+### Manual Installation
+
+1. Download `.vsix` file
+2. In VS Code:
+
+   * Go to Extensions
+   * Click `...` → Install from VSIX
+   * Select the file
+
+---
+
+## Usage
+
+* Open any file
+* Add a supported color format
+* Hover or click the color preview
+* Adjust using the color picker
+
+---
+
+## Supported Formats
+
+| Format | Example                |
+| ------ | ---------------------- |
+| HEX    | `#ff0000`              |
+| RGB    | `(255, 0, 0)`          |
+| RGBA   | `rgba(255, 0, 0, 0.5)` |
+
+---
+
+## Performance
+
+* Scans files efficiently
+* Updates only on changes
+* Designed to work smoothly even in large files
+
+---
+
+## Development
+
+Built using the VS Code Extension API.
+
+To run locally:
+
+```bash
+npm install
+```
+
+Then press:
+
+```
+Run → Start Debugging
+```
+
+---
+
+## Contributing
+
+Contributions are welcome.
+
+* Fork the repo
+* Create a feature branch
+* Submit a pull request
+
+---
+
+## Future Improvements
+
+* Color palette generator
+* Theme-aware contrast checking
+* Export colors to CSS/JSON
+* Color history tracking
+
+---
