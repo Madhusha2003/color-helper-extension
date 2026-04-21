@@ -1,3 +1,4 @@
+![Status](https://img.shields.io/badge/Status-Ongoing_Project-orange)
 # Universal Color Picker for VS Code
 
 A lightweight Visual Studio Code extension that detects and previews colors across **all file types**, with an integrated color picker for quick editing.
